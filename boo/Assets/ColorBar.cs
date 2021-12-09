@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class ColorBar : MonoBehaviour
 {
     public Image image;
-    public void setColor(byte a, byte b, byte c)
+    public void setColor(int a, int b, int c)
     {
-        image.color = new Color32(a, b, c, 250);
+        image.color = new Color32((byte)a, (byte)b, (byte)c, 250);
     }
 }

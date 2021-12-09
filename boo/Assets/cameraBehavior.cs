@@ -12,9 +12,9 @@ public class cameraBehavior : MonoBehaviour
 
     // color
     public byte colorRatio = 1;
-    public byte a = 125;
-    public byte b = 125;
-    public byte c = 125;
+    public int a = 0;
+    public int b = 0;
+    public int c = 125;
 
     public float rotationDegree = 5.0f;
     public ColorBar colorBar;
@@ -28,8 +28,56 @@ public class cameraBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    colorBar.setColor(a, b, c);
+        //}
+        if (Input.GetKeyDown(KeyCode.L))
         {
+            if (a == 255)
+            {
+                a = 0;
+            }
+            else
+            {
+                a = a + 5;
+            }
+            colorBar.setColor(a, b, c);
+        }
+        if (Input.GetKeyDown(KeyCode.J))
+        {
+            if (a == 0)
+            {
+                a = 255;
+            }
+            else
+            {
+                a = a - 5;
+            }
+            colorBar.setColor(a, b, c);
+        }
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            if (b == 255)
+            {
+                b = 0;
+            }
+            else
+            {
+                b = b + 5;
+            }
+            colorBar.setColor(a, b, c);
+        }
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            if (b == 0)
+            {
+                b = 255;
+            }
+            else
+            {
+                b = b - 5;
+            }
             colorBar.setColor(a, b, c);
         }
         if (Input.GetKeyDown(KeyCode.LeftArrow))
@@ -64,16 +112,6 @@ public class cameraBehavior : MonoBehaviour
         {
             this.transform.Translate(-Vector3.forward * 2);
         }
-        /*
-        if (Input.GetKeyDown(KeyCode.W)) // camera forward
-        {
-            this.transform.Rotate(rotationDegree, 0, 0);
-        }
-        if (Input.GetKeyDown(KeyCode.S)) // camera backward
-        {
-            this.transform.Rotate(-rotationDegree, 0, 0);
-        }
-        */
         if (Input.GetKeyDown(KeyCode.X))
         {
             // gunshot sound
@@ -91,4 +129,5 @@ public class cameraBehavior : MonoBehaviour
 
         }
     }
+
 }
