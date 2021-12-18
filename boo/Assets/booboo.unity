@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -654,7 +654,7 @@ Transform:
   m_GameObject: {fileID: 1954200949}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.35867882, y: 1.74, z: 13.16}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 10, y: 10, z: 5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -830,6 +830,8 @@ MonoBehaviour:
   Explosion: {fileID: 2771661109152740402, guid: fa48e4396abfab54e94e07fdeed6d89e, type: 3}
   ShotPoint: {fileID: 916315127}
   gunShot: {fileID: 0}
+  canvas: {fileID: 1954200949}
+  meshRenderer: {fileID: 0}
   colorRatio: 1
   a: 125
   b: 125

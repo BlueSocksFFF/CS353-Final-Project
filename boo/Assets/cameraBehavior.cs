@@ -9,6 +9,8 @@ public class cameraBehavior : MonoBehaviour
     public GameObject Explosion;
     public Transform ShotPoint;
     public AudioSource gunShot;
+    public GameObject canvas;
+    public MeshRenderer meshRenderer;
 
     // color
     public byte colorRatio = 1;
@@ -23,6 +25,9 @@ public class cameraBehavior : MonoBehaviour
     void Start()
     {
         gunShot = GetComponent<AudioSource>();
+        meshRenderer = canvas.GetComponent<MeshRenderer>();
+        meshRenderer.material.SetColor("_SplatColor1", new Color32((byte)a, (byte)b, (byte)c, 250));
+        colorBar.setColor(a, b, c);
     }
 
     // Update is called once per frame
@@ -43,6 +48,7 @@ public class cameraBehavior : MonoBehaviour
                 a = a + 5;
             }
             colorBar.setColor(a, b, c);
+            meshRenderer.material.SetColor("_SplatColor1", new Color32((byte)a, (byte)b, (byte)c, 250));
         }
         if (Input.GetKeyDown(KeyCode.J))
         {
@@ -55,6 +61,7 @@ public class cameraBehavior : MonoBehaviour
                 a = a - 5;
             }
             colorBar.setColor(a, b, c);
+            meshRenderer.material.SetColor("_SplatColor1", new Color32((byte)a, (byte)b, (byte)c, 250));
         }
         if (Input.GetKeyDown(KeyCode.I))
         {
@@ -67,6 +74,7 @@ public class cameraBehavior : MonoBehaviour
                 b = b + 5;
             }
             colorBar.setColor(a, b, c);
+            meshRenderer.material.SetColor("_SplatColor1", new Color32((byte)a, (byte)b, (byte)c, 250));
         }
         if (Input.GetKeyDown(KeyCode.K))
         {
@@ -79,6 +87,7 @@ public class cameraBehavior : MonoBehaviour
                 b = b - 5;
             }
             colorBar.setColor(a, b, c);
+            meshRenderer.material.SetColor("_SplatColor1", new Color32((byte)a, (byte)b, (byte)c, 250));
         }
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {

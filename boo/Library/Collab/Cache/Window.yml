@@ -14,10 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SimpleSelectedItems:
     m_Keys:
-    - Assets/Prefabs/Ball.prefab
-    - Assets/Scripts/CollisionPainter.cs
+    - Assets/Materials/Paint_White.mat
+    - Assets/Scripts/PaintTarget.cs
+    - Assets/booboo.unity
+    - Assets/cameraBehavior.cs
+    - Assets/painting.unitypackage
+    - Assets/painting.unitypackage.meta
+    - ProjectSettings/QualitySettings.asset
     - 
-    m_Values: 000000
+    m_Values: 0000000000000000
   RevisionSummary: 
   ChangesSearchValue: 
   SelectedHistoryRevision: 
